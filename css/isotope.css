@@ -1,0 +1,44 @@
+.portfolioFilter {
+  padding: 15px 0;
+}
+.portfolioFilter a {
+  margin-right: 6px;
+  color: #666;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  padding: 4px 15px;
+  border-radius: 50px;
+  display: inline-block;
+}
+.portfolioFilter a.current {
+  background: #1e1e1e;
+  border: 1px solid #1e1e1e;
+  color: #f9f9f9;
+}
+.portfolioContainer {
+  border: 1px solid #eee;
+  border-radius: 3px;
+}
+.portfolioContainer img {
+  margin: 5px;
+  max-width: 100%;
+  width: 250px;
+  height: 150px;
+}
+.isotope-item {
+  z-index: 2;
+}
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+.isotope,
+.isotope .isotope-item {
+  transition-duration: 0.8s;
+}
+.isotope {
+  transition-property: height, width;
+}
+.isotope .isotope-item {
+  transition-property: transform, opacity;
+}
