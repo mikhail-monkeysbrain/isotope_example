@@ -1,102 +1,53 @@
 <!doctype html>
 <html>
 <head>
-<meta charset="utf-8">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-
-<script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.isotope.js"></script>
-
-
+  <meta charset="utf-8">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-      <div class="portfolioFilter">  
-        <ul class="Portfolio-nav wow fadeIn delay-02s">
-        	<li><a href="#" data-filter="*" class="current" >Все услуги</a></li>
-            <li><a href="#" data-filter=".landing" >Одностраничники</a></li>
-            <li><a href="#" data-filter=".responsive" >Отзывчивые</a></li>
-            <li><a href="#" data-filter=".shop" >Магазины</a></li>
-            <li><a href="#" data-filter=".cms" >На движке</a></li>
-        </ul>
-       </div> 
-        
-	</div>
-    <div class="portfolioContainer wow fadeInUp delay-04s">
-       	<div class=" Portfolio-box printdesign">
-           	<a href="#"><img src="img/Portfolio-pic1.jpg" alt="">1</a>	
-           	<h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
-        <div class="Portfolio-box landing responsive">
-            <a href="#"><img src="img/Portfolio-pic2.jpg" alt="">2</a>	
-            <h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
-        <div class=" Portfolio-box shop">
-            <a href="#"><img src="img/Portfolio-pic3.jpg" alt="">3</a>	
-            <h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
-        <div class=" Portfolio-box landing responsive" >
-            <a href="#"><img src="img/Portfolio-pic4.jpg" alt="">4</a>	
-            <h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
-        <div class=" Portfolio-box cms">
-            <a href="#"><img src="img/Portfolio-pic5.jpg" alt="">5</a>	
-            <h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
-        <div class=" Portfolio-box shop responsive cms">
-            <a href="#"><img src="img/Portfolio-pic6.jpg" alt="">6</a>	
-            <h3>Наименование</h3>
-            <p>Цены 1 .. цена n</p>
-        </div>
+  <div class="portfolioFilter">  
+    <ul class="Portfolio-nav wow fadeIn delay-02s">
+    	<li><a href="#" data-filter="*" class="current" >Все услуги</a></li>
+      <li><a href="#" data-filter=".landing" >Одностраничники</a></li>
+      <li><a href="#" data-filter=".responsive" >Отзывчивые</a></li>
+      <li><a href="#" data-filter=".shop" >Магазины</a></li>
+      <li><a href="#" data-filter=".cms" >На движке</a></li>
+    </ul>
+  </div> 
+  <div class="portfolioContainer wow fadeInUp delay-04s">
+   	<div class=" Portfolio-box printdesign">
+     	<a href="#"><img src="img/Portfolio-pic1.jpg" alt="">1</a>	
+     	<h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
     </div>
-
-
-<script type="text/javascript">
-
-$(window).load(function(){
-  
-  
-  var $container = $('.portfolioContainer'),
-      $body = $('body'),
-      colW = 375,
-      columns = null;
-
-  
-  $container.isotope({
-    resizable: true,
-    masonry: {
-      columnWidth: colW
-    }
-  });
-  
-  $(window).smartresize(function(){
-    var currentColumns = Math.floor( ( $body.width() -30 ) / colW );
-    if ( currentColumns !== columns ) {
-      columns = currentColumns;
-      $container.width( columns * colW )
-        .isotope('reLayout');
-    }
-    
-  }).smartresize();
-  $('.portfolioFilter a').click(function(){
-        $('.portfolioFilter .current').removeClass('current');
-        $(this).addClass('current');
- 
-        var selector = $(this).attr('data-filter');
-        $container.isotope({
-			
-            filter: selector,
-         });
-         return false;
-    });
-  
-});
-
-</script>
+    <div class="Portfolio-box landing responsive">
+      <a href="#"><img src="img/Portfolio-pic2.jpg" alt="">2</a>	
+      <h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
+    </div>
+    <div class=" Portfolio-box shop">
+      <a href="#"><img src="img/Portfolio-pic3.jpg" alt="">3</a>	
+      <h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
+    </div>
+    <div class=" Portfolio-box landing responsive" >
+      <a href="#"><img src="img/Portfolio-pic4.jpg" alt="">4</a>	
+      <h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
+    </div>
+    <div class=" Portfolio-box cms">
+      <a href="#"><img src="img/Portfolio-pic5.jpg" alt="">5</a>	
+      <h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
+    </div>
+    <div class=" Portfolio-box shop responsive cms">
+      <a href="#"><img src="img/Portfolio-pic6.jpg" alt="">6</a>	
+      <h3>Наименование</h3>
+      <p>Цены 1 .. цена n</p>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/jquery.1.8.3.min.js"></script>
+  <script type="text/javascript" src="js/jquery.isotope.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
